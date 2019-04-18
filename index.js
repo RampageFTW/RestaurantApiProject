@@ -5,11 +5,14 @@ function getLatLongByCityName(cityName, query) {
   const searchURL = `https://developers.zomato.com/api/v2.1/search?q=${cityName}`;
 
   fetch(searchURL, {
-    mode: 'cors',
+    // mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
-      'user-key': '67646e13c44ac3bdc3cbb2e9f1081aa7',
-      'Access-Control-Allow-Origin':'*'
+      // 'user-key': '67646e13c44ac3bdc3cbb2e9f1081aa7',
+      // 'X-Zomato-API-Key': '67646e13c44ac3bdc3cbb2e9f1081aa7', 
+      'user-key': '31a83692b8cfde09a94e3b299af8c46c',
+      'X-Zomato-API-Key': '31a83692b8cfde09a94e3b299af8c46c'
+      // 'Access-Control-Allow-Origin':'*',
     }})
     .then(response => {
       if (response.ok) {
@@ -17,18 +20,16 @@ function getLatLongByCityName(cityName, query) {
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => getResultByLatLong(responseJson, query))
+    .then(responseJson => renderResult(responseJson, query))
     .catch(err => {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });
 }
 
-function getResultByLatLong(responseJson, query) {
-  console.log(responseJson, query);
-}
+
 
   //step 3: with the api results display them back to the user
-function renderResult(result) {
+function renderResult(result, query) {
 	const outputElem = $('.js-search-results');
 	const rand = Math.floor(Math.random() * 19);
 	const rest = result.restaurants[rand];

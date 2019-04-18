@@ -13,7 +13,7 @@ body {
   content: '';
   height: 100vh;
   width: 100%;
-  background-image: url(header2.jpg);
+  background-image: url(header3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -77,41 +77,55 @@ main {
 
 /* fixing results */
 .thumb-img {
-  position: absolute;
-  bottom: 3vh;
-  left: 1vh;
+	border-radius: 5px;
+	margin-right:10px;
+	float: left;
+	width:150px;
+	height: 100px;
 }
 
 
 .restaurant-name {
-  position: relative;
-  top: 33vh;
+	font-weight: bold;
+	font-size: 30px;
 }
 
 .city-name {
-  position: absolute;
-  top: 38vh;
-}
-
-.col-3 {
-  position: absolute;
-  top: 33vh;
-  right: 50vh;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .user-rating {
-  position: absolute;
-  top: 5vh;
-  left: -2vh;
+  background-color: #1abc9c;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  max-width: 200px;
+  padding: 15px;
+  text-align: center;
 }
 
+
 .result-btn {
-  position: absolute;
-  top: 48vh;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 5px;
+	border: 1px solid #16a085;
+	border-radius: 5px;
+	background-color: white;
+	color: #16a085;
+}
+
+.price-range {
+	color: black;
 }
 
 .menu {
   left: 76vh;
+}
+
+img {
+  border-radius: 18px;
 }
 
 
