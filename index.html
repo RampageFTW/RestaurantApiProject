@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MVP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- My own stylesheet -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="grid.css">
+  </head>
+  <body>
+    <header class="showcase">
+      <div class="content">
+        <div class=logo><a href="" onClick="window.location.reload()"><img src="logo.jpg" alt="food"></a></div>
+        <div class="title">
+          Looking to dine at a nice restaurant?
+        </div>
+      </div>
+    </header>
+    <main role="main" aria-live="assertive">
+      <div class="row">
+        <div class="col-8 box">
+            <h2>What are you waiting for?</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 search-box">
+      <form action="#" class="js-search-form" name="search-rest">
+            <label for="js-query"><h2>Find a nice restaurant near you. (Ex. Los Angeles, CA):</h2> </label><br>
+            <input type="text" id="js-cityName" value="Los Angeles, CA" required><br>
+            <label for="js-query"><h2>What type of food are you craving? (Ex. Pizza):</h2> </label><br>
+            <input type="text" id="js-query" value="burger" required><br>
+            <br>
+            <button type="submit" class="first-submit">Search Restaurant</button>
+          </form>
+        </div>
+      </div>
+      <div class="js-search-results row hidden">
+      </div>
+    </main>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+  <script type="text/javascript" src="index.js"></script>
+  </body>
+
+</html>

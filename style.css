@@ -1,0 +1,152 @@
+body {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.showcase {
+  position: relative;
+}
+
+.showcase::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url(header2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  transition: all 1000ms;
+}
+
+.showcase:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+.showcase:hover .content {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  margin-top: 105px;
+  margin-left: -145px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  transition: all 1000ms;
+}
+
+.content .logo {
+  height: 180px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content .title {
+  font-size: 2.2rem;
+  margin-top: 1rem;
+}
+
+.content .text {
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+main {
+  position: relative;
+  bottom: 45vh;
+  left: 37vh;
+  overflow:hidden;
+}
+
+.col-6 p {
+  word-wrap: break-word;
+  padding-right: 81px;
+}
+
+/* fixing results */
+.thumb-img {
+  position: absolute;
+  bottom: 3vh;
+  left: 1vh;
+}
+
+
+.restaurant-name {
+  position: relative;
+  top: 33vh;
+}
+
+.city-name {
+  position: absolute;
+  top: 38vh;
+}
+
+.col-3 {
+  position: absolute;
+  top: 33vh;
+  right: 50vh;
+}
+
+.user-rating {
+  position: absolute;
+  top: 5vh;
+  left: -2vh;
+}
+
+.result-btn {
+  position: absolute;
+  top: 48vh;
+}
+
+.menu {
+  left: 76vh;
+}
+
+
+
+
+
+/* Small Screens */
+@media (max-width: 560px) {
+  .showcase::after {
+    height: 100vh;
+  }
+
+  .content {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .content .logo {
+    height: 140px;
+    width: 140px;
+  }
+
+  .content .text {
+    display: none;
+  }
+
+/* Landscape */
+@media (max-height: 500px) {
+  .content .title,
+  .content .text {
+    display: none;
+  }
+
+  .content {
+    top: 0;
+  }
+}
+}
