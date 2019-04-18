@@ -6,6 +6,8 @@ function getLatLongByCityName(cityName, query) {
 
   fetch(searchURL, {
     // mode: 'cors',
+    'key': '31a83692b8cfde09a94e3b299af8c46c',
+    'apikey': '31a83692b8cfde09a94e3b299af8c46c',
     headers: {
       'Content-Type': 'application/json',
       // 'user-key': '67646e13c44ac3bdc3cbb2e9f1081aa7',
