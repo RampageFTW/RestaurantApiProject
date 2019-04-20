@@ -1,6 +1,6 @@
 # insight•full
 
-The insight•full app allows you to track your meditation sessions and add insights on how your session went. You can then view your practice over time and read your journal of insights gained during your sessions.
+The Restaurant app allows you to search restaurants in the city you are interested and by the type of food you are craving.
 
 ### Working Prototype
 

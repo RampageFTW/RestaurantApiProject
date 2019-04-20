@@ -6,16 +6,16 @@ function getLatLongByCityName(cityName, query) {
 
   fetch(searchURL, {
     // mode: 'cors',
-    'key': '460286dfbdb204719a6ef49dfdc82c58',
-    'apikey': '460286dfbdb204719a6ef49dfdc82c58',
+    'key': '31a83692b8cfde09a94e3b299af8c46c',
+    'apikey': '31a83692b8cfde09a94e3b299af8c46c',
     headers: {
       // 'Content-Type': 'application/json',
       // 'user-key': '67646e13c44ac3bdc3cbb2e9f1081aa7',
       // 'X-Zomato-API-Key': '67646e13c44ac3bdc3cbb2e9f1081aa7', 
-      // 'user-key': '31a83692b8cfde09a94e3b299af8c46c',
-      // 'X-Zomato-API-Key': '31a83692b8cfde09a94e3b299af8c46c',
-      'user-key': '460286dfbdb204719a6ef49dfdc82c58',
-      'X-Zomato-API-Key': '460286dfbdb204719a6ef49dfdc82c58'
+      'user-key': '31a83692b8cfde09a94e3b299af8c46c',
+      'X-Zomato-API-Key': '31a83692b8cfde09a94e3b299af8c46c',
+      // 'user-key': '460286dfbdb204719a6ef49dfdc82c58',
+      // 'X-Zomato-API-Key': '460286dfbdb204719a6ef49dfdc82c58'
       // 'Access-Control-Allow-Origin':'*',
     }})
     .then(response => {
