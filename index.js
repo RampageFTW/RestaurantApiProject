@@ -78,7 +78,7 @@ function renderResult(result, query) {
 	<p>Cuisine: ${rest.restaurant.cuisines}</p>
 	</div>
 	<div class="col-6">
-	<form action="http://www.google.com/maps/place/${rest.restaurant.location.latitude},${rest.restaurant.location.longitude}" target="_blank">
+	<form action="https://www.google.com/maps/place/${rest.restaurant.location.latitude},${rest.restaurant.location.longitude}" target="_blank">
 	</form>
 	<form action="${rest.restaurant.menu_url}" target="_blank" >
 	<button type="submit" class="result-btn menu">Menu <i class="fas fa-utensils"></i></button>
@@ -107,7 +107,7 @@ function renderResult(result, query) {
 	<p>Cuisine: ${rest.restaurant.cuisines}</p>
 	</div>
 	<div class="col-6">
-	<form action="http://www.google.com/maps/place/${rest.restaurant.location.latitude},${rest.restaurant.location.longitude}" target="_blank">
+	<form action="https://www.google.com/maps/place/${rest.restaurant.location.latitude},${rest.restaurant.location.longitude}" target="_blank">
 	<button type="submit" class="result-btn">Directions <i class="fas fa-map-marked-alt"></i> </button><br>
 	</form>
 	<form action="${rest.restaurant.menu_url}" target="_blank" >
