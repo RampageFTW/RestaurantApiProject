@@ -1,10 +1,10 @@
-# insight•full
+# Restaurant App
 
 The Restaurant app allows you to search restaurants in the city you are interested and by the type of food you are craving.
 
 ### Working Prototype
 
-View Node working prototype here: [insight•full](https://rampageftw.github.io/RestaurantApiProject) 
+View Node working prototype here: [Restaurant app](https://rampageftw.github.io/RestaurantApiProject) 
 
 
 
