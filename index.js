@@ -2,62 +2,62 @@
 //step 2: with the input from the user make the api call.
 //this is how to get restaurant location data
 function getLatLongByCityName(cityName, query) {
-  const searchURL = `https://developers.zomato.com/api/v2.1/search?q=${cityName}`;
+    const searchURL = `https://developers.zomato.com/api/v2.1/search?q=${cityName}`;
 
-  fetch(searchURL, {
-    // mode: 'cors',
-    'key': '31a83692b8cfde09a94e3b299af8c46c',
-    'apikey': '31a83692b8cfde09a94e3b299af8c46c',
-    headers: {
-      // 'Content-Type': 'application/json',
-      // 'user-key': '67646e13c44ac3bdc3cbb2e9f1081aa7',
-      // 'X-Zomato-API-Key': '67646e13c44ac3bdc3cbb2e9f1081aa7', 
-      'user-key': '31a83692b8cfde09a94e3b299af8c46c',
-      'X-Zomato-API-Key': '31a83692b8cfde09a94e3b299af8c46c',
-      // 'user-key': '460286dfbdb204719a6ef49dfdc82c58',
-      // 'X-Zomato-API-Key': '460286dfbdb204719a6ef49dfdc82c58'
-      // 'Access-Control-Allow-Origin':'*',
-    }})
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw new Error(response.statusText);
+    fetch(searchURL, {
+        // mode: 'cors',
+        'key': '31a83692b8cfde09a94e3b299af8c46c',
+        'apikey': '31a83692b8cfde09a94e3b299af8c46c',
+        headers: {
+            // 'Content-Type': 'application/json',
+            // 'user-key': '67646e13c44ac3bdc3cbb2e9f1081aa7',
+            // 'X-Zomato-API-Key': '67646e13c44ac3bdc3cbb2e9f1081aa7', 
+            'user-key': '31a83692b8cfde09a94e3b299af8c46c',
+            'X-Zomato-API-Key': '31a83692b8cfde09a94e3b299af8c46c',
+            // 'user-key': '460286dfbdb204719a6ef49dfdc82c58',
+            // 'X-Zomato-API-Key': '460286dfbdb204719a6ef49dfdc82c58'
+            // 'Access-Control-Allow-Origin':'*',
+        }
     })
-    .then(responseJson => renderResult(responseJson, query))
-    .catch(err => {
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
-    });
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error(response.statusText);
+        })
+        .then(responseJson => renderResult(responseJson, query))
+        .catch(err => {
+            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+        });
 }
 
+function priceRange(inputPriceRange) {
+    if (inputPriceRange == 1) {
 
+        const price_1 = `<p>Price: <i class="fas fa-money-bill-alt"></i></p>`;
+        return price_1;
 
-  //step 3: with the api results display them back to the user
+    }
+    else if (inputPriceRange == 2) {
+        const price_2 = `<p>Price: <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i></p>`;
+        return price_2;
+    }
+    else if (inputPriceRange == 3) {
+        const price_3 = `<p>Price: <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i></p>`;
+        return price_3;
+    }
+    else {
+        return `Price: <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i></i>`;
+    }
+
+}
+
+//step 3: with the api results display them back to the user
 function renderResult(result, query) {
-	const outputElem = $('.js-search-results');
-	const rand = Math.floor(Math.random() * 19);
-	const rest = result.restaurants[rand];
-	function priceRange () {
-	if (rest.restaurant.price_range == 1){
-
-		const price_1 = `<p>Price: <i class="fas fa-money-bill-alt"></i></p>`;
-		return price_1;
-
-	}
-	else if (rest.restaurant.price_range == 2){
-		const price_2 = `<p>Price: <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i></p>`;
-		return price_2;
-	}
-	else if (rest.restaurant.price_range == 3){
-		const price_3 = `<p>Price: <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i></p>`;
-		return price_3;
-	}
-	else {
-		return  `Price: <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i> <i class="fas fa-money-bill-alt"></i></i>`;
-	}
-
-}
-	const text = `
+    const outputElem = $('.js-search-results');
+    const rand = Math.floor(Math.random() * 19);
+    const rest = result.restaurants[rand];
+    const text = `
 	<div class="row top-results">
 	<div class="col-2">
 	<img src="${rest.restaurant.thumb}" class="thumb-img" alt="${rest.restaurant.name}">
@@ -73,7 +73,7 @@ function renderResult(result, query) {
 	<div class="row">
 	<div class="col-6">
 	<p>Address: ${rest.restaurant.location.address}</p>
-	<p class="price-range">${priceRange()}</p>
+	<p class="price-range">${priceRange(rest.restaurant.price_range)}</p>
 	<p>Average Cost for Two: $${rest.restaurant.average_cost_for_two}</p>
 	<p>Cuisine: ${rest.restaurant.cuisines}</p>
 	</div>
@@ -86,7 +86,7 @@ function renderResult(result, query) {
 	</div>
 	</div>`;
 
-	const text_noimage = `
+    const text_noimage = `
 	<div class="row">
 	<div class="col-2">
 	<img src="rest.jpg" class="thumb-img" alt="restaurant">
@@ -102,7 +102,7 @@ function renderResult(result, query) {
 	<div class="row">
 	<div class="col-6">
 	<p>Address: ${rest.restaurant.location.address}</p>
-	<p style="price-range">${priceRange()}</p>
+	<p style="price-range">${priceRange(rest.restaurant.price_range)}</p>
 	<p>Average Cost for Two: $${rest.restaurant.average_cost_for_two}</p>
 	<p>Cuisine: ${rest.restaurant.cuisines}</p>
 	</div>
@@ -117,30 +117,30 @@ function renderResult(result, query) {
 	</div>
 	`;
 
-	if (rest.restaurant.thumb == ""){
-		$('.js-search-results').html(text_noimage);
-	}
-	else {
-		$('.js-search-results').html(text);
-	}
-	console.log(`${priceRange()}`);
-	$('.js-search-results').removeClass('hidden');
-	$('.search-box').addClass('hidden');
-	$('.box').addClass('hidden');
-	$('.top-bar').removeClass('hidden');
+    if (rest.restaurant.thumb == "") {
+        $('.js-search-results').html(text_noimage);
+    }
+    else {
+        $('.js-search-results').html(text);
+    }
+    console.log(`${priceRange()}`);
+    $('.js-search-results').removeClass('hidden');
+    $('.search-box').addClass('hidden');
+    $('.box').addClass('hidden');
+    $('.top-bar').removeClass('hidden');
 }
 
 //step 1 get input from the user
 function watchSubmit() {
-  $('.js-search-form').submit(event => {
-    event.preventDefault();
-    const cityName = $('#js-cityName').val();
-    const query = $('#js-query').val();
-    // clear out the input
-    // queryTarget.val("");
-    console.log(cityName, query);
-    getLatLongByCityName(cityName, query);
-  });
+    $('.js-search-form').submit(event => {
+        event.preventDefault();
+        const cityName = $('#js-cityName').val();
+        const query = $('#js-query').val();
+        // clear out the input
+        // queryTarget.val("");
+        console.log(cityName, query);
+        getLatLongByCityName(cityName, query);
+    });
 }
 
 $(watchSubmit);
