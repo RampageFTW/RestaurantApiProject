@@ -17,17 +17,17 @@ View Node working prototype here: [Restaurant app](https://rampageftw.github.io/
 
 **Landing Page** 
 
-As a user, the user is prompted to this page that gives them instructions to put some inputs to search a restaurant.
-![Landing Page Design](/screenshots/wireframes/landing.png)
+As a user, I should be prompted to the landing page that gives me instructions to put some inputs to search a restaurant.
+![Landing Page Design](/screenshots/wireframes/wire-frame-landing-page.png)
 
 
 ## Screenshots: MVP
 
-![Landing Page](/screenshots/landing-page.png)
+![Landing Page](/screenshots/main-site.png)
 
 ## Technical
 
-Meditation Tracker was built with: 
+Restaurant App was built with:
 
 #### Front End
 
@@ -38,7 +38,7 @@ Meditation Tracker was built with:
 
 
 ### Responsive
-This app is built to be responsive to smaller screen sizes using a float-grid css and media screen width breakpoint of 700px for smaller screen sizes
+This app is built to be responsive to smaller screen sizes using a float-grid css and media screen width breakpoint of 560px for smaller screen sizes
 
 
 
