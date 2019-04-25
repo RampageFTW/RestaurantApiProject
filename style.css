@@ -1,13 +1,12 @@
 html {
   background: rgba(0, 0, 0, 0) url("header3.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-  /* background: rgba(0, 0, 0, 0.9); */
   margin: 0;
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,17 +41,14 @@ body {
 
 
 main {
-  /* position: relative;
-  bottom: 45vh;
-  left: 37vh;
-  overflow:hidden; */
   width: 60%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
 }
 
-input, button {
+input,
+button {
   width: auto;
   padding: 10px 30px;
   color: gray;
@@ -74,35 +70,34 @@ input, button {
   color: black;
 }
 
-/* fixing results */
 .js-search-results {
-	background-color: white;
-	border-radius: 5px;
-	padding: 20px;
-	width: 90%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 90%;
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 .thumb-img {
-	border-radius: 5px;
-	margin-right:10px;
-	float: left;
-	width:150px;
-	height: 100px;
+  border-radius: 5px;
+  margin-right: 10px;
+  float: left;
+  width: 150px;
+  height: 100px;
 }
 
 
 .restaurant-name {
-	font-weight: bold;
+  font-weight: bold;
   font-size: 30px;
   color: black;
 }
 
 .city-name {
-	font-weight: 900;
+  font-weight: 900;
   text-transform: capitalize;
   color: #607D8B;
   text-align: center;
@@ -124,17 +119,17 @@ input, button {
 
 
 .result-btn {
-	width: 100%;
-	height: 50px;
-	margin-bottom: 5px;
-	border: 1px solid #458594;
-	border-radius: 5px;
-	background-color: white;
-	color: #458594;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  border: 1px solid #458594;
+  border-radius: 5px;
+  background-color: white;
+  color: #458594;
 }
 
 .price-range {
-	color: black;
+  color: black;
 }
 
 .menu {
@@ -143,10 +138,9 @@ input, button {
 
 img {
   border-radius: 18px;
+  border: 5px solid white;
 }
 
-
-/* large screens */ 
 @media (max-width: 1920px) {
   .restaurant-name {
     text-align: center;
@@ -158,20 +152,17 @@ img {
   main {
     width: 95%;
   }
+
   .restaurant-name {
     text-align: center;
   }
-  
+
   .user-rating {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-
-
-
-/* medium screens */
 @media (max-width: 750px) {
   main {
     font-size: .9rem;
@@ -188,7 +179,6 @@ img {
   }
 }
 
-/* Small Screens */
 @media (max-width: 560px) {
   main {
     width: 95%;
@@ -221,18 +211,15 @@ img {
     font-size: .9rem;
   }
 
+  @media (max-width: 500px) {
 
+    .content .title,
+    .content .text {
+      display: none;
+    }
 
-/* Landscape */
-@media (max-width: 500px) {
-  .content .title,
-  .content .text {
-    display: none;
-  }
-
-  .content {
-    top: 0;
+    .content {
+      top: 0;
+    }
   }
 }
-}
-
