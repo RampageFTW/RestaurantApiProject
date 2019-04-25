@@ -67,7 +67,7 @@ input, button {
 
 .col-6 p {
   word-wrap: break-word;
-  padding-right: 81px;
+  color: black;
 }
 
 /* fixing results */
@@ -93,12 +93,15 @@ input, button {
 
 .restaurant-name {
 	font-weight: bold;
-	font-size: 30px;
+  font-size: 30px;
+  color: black;
 }
 
 .city-name {
-	font-weight: bold;
-	text-transform: uppercase;
+	font-weight: 900;
+  text-transform: capitalize;
+  color: #607D8B;
+  text-align: center;
 }
 
 .user-rating {
@@ -109,6 +112,10 @@ input, button {
   max-width: 200px;
   padding: 15px;
   text-align: center;
+}
+
+.address {
+  color: black;
 }
 
 
@@ -135,13 +142,52 @@ img {
 }
 
 
+/* large screens */ 
+@media (max-width: 1920px) {
+  .restaurant-name {
+    text-align: center;
+  }
+}
 
 
+@media (max-width: 1018px) {
+  main {
+    width: 95%;
+  }
+  .restaurant-name {
+    text-align: center;
+  }
+  
+  .user-rating {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+/* medium screens */
+@media (max-width: 750px) {
+  main {
+    font-size: .9rem;
+  }
+}
+
+
+@media (max-width: 639px) {
+  .thumb-img {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 /* Small Screens */
 @media (max-width: 560px) {
-  .showcase::after {
-    height: 100vh;
+  main {
+    width: 95%;
   }
 
   .content {
@@ -158,8 +204,23 @@ img {
     display: none;
   }
 
+  .restaurant-name {
+    text-align: center;
+  }
+
+  .user-rating {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-6 p {
+    font-size: .9rem;
+  }
+
+
+
 /* Landscape */
-@media (max-height: 500px) {
+@media (max-width: 500px) {
   .content .title,
   .content .text {
     display: none;
@@ -170,3 +231,4 @@ img {
   }
 }
 }
+
