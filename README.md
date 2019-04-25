@@ -41,7 +41,7 @@ This app is built to be responsive to smaller screen sizes using a float-grid cs
 ## Development Road Map
 Features for future iterations include: 
 - Add an input that lets you search by ratings
-- Add a results page to display more than one restaurant
+- Add a button that gives you a new restaurant
 - Add a filter that lets you search for a specific result for ex. distance
 - Add an input that lets you search by distance.
 
