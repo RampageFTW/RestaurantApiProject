@@ -8,22 +8,18 @@ View Node working prototype here: [Restaurant app](https://rampageftw.github.io/
 
 
 
-## Site Map: MVP 
+## Screenshots:
 
-![Site Map](/screenshots/main-site.png)
+![Landing Page](/screenshots/main-site.png)
+![Results Page](/screenshots/results-page.png)
 
 
-## UX & User Stories: MVP
+## UX & User Stories:
 
 **Landing Page** 
 
 As a user, I should be prompted to the landing page that gives me instructions to put some inputs to search a restaurant.
 ![Landing Page Design](/screenshots/wireframes/wire-frame-landing-page.png)
-
-
-## Screenshots: MVP
-
-![Landing Page](/screenshots/main-site.png)
 
 ## Technical
 
