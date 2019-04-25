@@ -31,7 +31,7 @@ body {
 
 .content .title {
   font-size: 2.2rem;
-  margin-top: 1rem;
+  margin-top: 4rem;
   color: #458594;
 }
 
@@ -59,6 +59,10 @@ input, button {
   border: 1px solid gray;
   border-radius: 5px;
   text-align: center;
+}
+
+.first-submit {
+  background-color: #d6d6d6;
 }
 
 .box {
@@ -196,8 +200,8 @@ img {
   }
 
   .content .logo {
-    height: 140px;
-    width: 140px;
+    height: 180px;
+    width: 180px;
   }
 
   .content .text {
